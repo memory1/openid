@@ -20,8 +20,8 @@ export class UsersComponent implements OnInit {
   }
   getUsers(): any {
     return [
-      {name: 'John', email:'john@a.com'},
-      {name:'colleen', email:'c@b.com'}
+      {name: 'John', email: 'john@a.com'},
+      {name: 'colleen', email: 'c@b.com'}
     ];
   }
 
