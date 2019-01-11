@@ -15,7 +15,7 @@ import { AppComponent } from './app.component';
 import { CustomerComponent } from './customer/customer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavComponent } from './nav/nav.component';
-import { CustomerListComponent } from './customer-list/customer-list.component';
+import { CustomerListComponent } from './customer-list/customer-list.component';  
 
 @NgModule({
   declarations: [
