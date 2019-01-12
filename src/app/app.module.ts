@@ -1,49 +1,62 @@
-import { LayoutModule } from '@angular/cdk/layout';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import {
   MatButtonModule,
-  MatIconModule,
-  MatListModule,
-  MatSidenavModule,
-  MatToolbarModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule
+  MatToolbarModule,
+  MatDialogModule,
+  MatTableModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSelectModule
 } from '@angular/material';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AdminModule } from './admin/admin.module';
+
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
-import { CustomerComponent } from './customer/customer.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { NavComponent } from './nav/nav.component';
-import { CustomerListComponent } from './customer-list/customer-list.component';  
+import { HomeComponent } from './home/home.component';
+import { ContactUsComponent } from './home/contact-us.component';
+import { ProjectListComponent } from './projects/project-list.component';
+import { ProjectComponent } from './projects/project.component';
+import { AddEditMilestoneDialogComponent } from './projects/add-edit-milestone-dialog.component';
+import { AdminModule } from './admin/admin.module';
+import { CoreModule } from './core/core.module';
+import { UnauthorizedComponent } from './home/unauthorized.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    CustomerComponent,
-    NavComponent,
-    CustomerListComponent
+    HomeComponent,
+    ContactUsComponent,
+    ProjectListComponent,
+    ProjectComponent,
+    AddEditMilestoneDialogComponent,
+    UnauthorizedComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    AdminModule,
+    HttpClientModule,
+    FormsModule,
     BrowserAnimationsModule,
-    LayoutModule,
-    MatToolbarModule,
     MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatGridListModule,
-    MatCardModule,
-    MatMenuModule,
+    MatToolbarModule,
+    MatDialogModule,
     MatTableModule,
-    MatPaginatorModule,
-    MatSortModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    AdminModule,
+    CoreModule,
+    AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+  ],
+  bootstrap: [AppComponent],
+  entryComponents:[
+    AddEditMilestoneDialogComponent
+  ]
 })
-export class AppModule {}
+export class AppModule { }
